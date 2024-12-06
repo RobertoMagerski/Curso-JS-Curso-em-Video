@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Prática</title>
+</head>
+<body>
+
+    <h1>Aula Prática</h1>
+    <p>Qua sua nacionalidade?</p>
+    <input type="text" name="na" id="na">
+    <button type="button" onclick="nacionalidade()"> Resultado</button>
+    <div id ="res"></div>
+    
+    <script>
+        function nacionalidade() { 
+            var pais = window.document.querySelector('input#na')
+            var res = window.document.querySelector('div#res')
+            var txtv = (pais.value)
+            res.innerHTML = (`Sua nacionalidade é ${txtv}`)
+            if (txtv == "Brasil" ) {
+            res.innerHTML = (`Você é brasileiro`)
+        } else {
+            res.innerHTML = (`Você é estrangeiro`)
+        }
+        }
+        
+    </script>
+    
+</body>
+</html>
